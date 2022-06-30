@@ -1,7 +1,7 @@
 # Code samples
 ## Software Engineer - Mission Planning position at ispace, inc.
 
-This repository is a temporary collection of code I worked on the past two years within various projects. When necessary, due permission has been obtained to share it publicly. The repo is divided in 3 categories:
+This repository is a temporary collection of code I worked on over the past two years within various projects. When necessary, due permission has been obtained to share it publicly. The repo is divided in 3 categories:
 - C# (ESA Phi-Lab/Master thesis)
 - Python (Riscognition)
 - JavaScript (Sen2Cube.at)
