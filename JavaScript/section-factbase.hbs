@@ -1,0 +1,77 @@
+<div class="aoi-select" title="Select spatio-temporal subset here">
+    <div class="aoi-select-section">
+        <div><h1>Spatial subset</h1><br/><span>Draw Area of Interest</span></div>
+        <div style="height:20px;margin-bottom:5px;margin-top:10px">
+            <span>
+                <div id="pointSelect" class="aoi-select-geometry input-field-major tooltip" title="Select a single point or multi-points" {{action "select" "point"}}>
+                    <img src="/img/aoi/select_aoi_points_b.png" width=30px />
+                </div>
+            </span>
+            <span>
+                <div id="lineSelect" class="aoi-select-geometry input-field-major tooltip" title="Select a single line or multi-lines"  {{action "select" "line"}}>
+                    <img src="/img/aoi/select_aoi_lines_b.png" width=30px />
+                </div>
+            </span>
+            <span>
+                <div id="polygonSelect" class="aoi-select-geometry input-field-major tooltip" title="Select a single polygon or multi-polygons"  {{action "select" "polygon"}}>
+                    <img src="/img/aoi/select_aoi_polygons_b.png" width=30px />
+                </div>
+            </span>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div class="aoi-select-section">
+        <span>Or use GeoJSON dataset:</span>
+        <label for="aoi-select-upload">
+            <span class="aoi-select-button input-field-major">Upload</span>
+            <input  type="file"
+                    id="aoi-select-upload"
+                    accept=".json, .geojson"
+                    onchange={{action "upload"}}
+                    hidden >
+        </label>
+        <input
+            id="aoi-select-url"
+            class="aoi-select-button input-field-major"
+            type="text"
+            name="aoi-select-url"
+            placeholder="URL"
+            onchange={{action "download"}}>
+    </div>
+    <hr class="bottomborder"/>
+    <div class="aoi-select-section">
+        <div><h1>Temporal subset</h1>
+        <div class="select-date">
+            <span>Between</span>
+            <EmberFlatpickr
+                placeholder="Start date"
+                class="input-field-major aoi-select-time"
+                @allowInput={{true}}
+                @inline={{false}}
+                @date={{selectedStart}}
+                @enableTime={{false}}
+                @minDate={{factbaseStartDate}}
+                @maxDate={{factbaseEndDate}}
+                @onChange={{action "onChangeStartDate"}}
+            />
+            <span>and</span>
+
+            <EmberFlatpickr
+                placeholder="End date"
+                class="input-field-major aoi-select-time"
+                @allowInput={{true}}
+                @inline={{false}}
+                @date={{selectedEnd}}
+                @enableTime={{false}}
+                @minDate={{factbaseStartDate}}
+                @maxDate={{factbaseEndDate}}
+                @onChange={{action "onChangeEndDate"}}
+            />
+          </div>
+
+        </div>
+    </div>
+</div>
+
+{{yield}}
