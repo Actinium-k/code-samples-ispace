@@ -6,4 +6,4 @@ This repository is a temporary collection of code I worked on over the past two 
 - Python (Riscognition)
 - JavaScript (Sen2Cube.at)
 
-These samples are part of larger programs with components of lesser interest for review. All of the C# and Python code was written by myself, while the JavaScript/Ember samples were initially written by someone else and heavily modified by myself. Details can be provided upon request.
+These samples are part of larger programs, the full source code of which are not available, with components of lesser interest for review. All of the C# and Python code was written by myself, while the JavaScript/Ember samples were initially written by someone else and heavily modified by myself. Details can be provided upon request.
